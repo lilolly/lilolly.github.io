@@ -29,6 +29,11 @@
 	border-width: var(--border_thickness);
 }
 
+#home_title h1 {
+	font-family: "8BitOperator";
+	font-size: 36pt;
+}
+
 #home_links {
 	width: 75%;
 	display: flex;
@@ -37,11 +42,12 @@
 	align-content: space-around;
 }
 
-#home_anchor {
+.home_anchor {
 	width: 25%;
 	display: flex;
 	justify-content: center;
 }
 
-#home_anchor a {
+.home_anchor a:hover {
+	transform: scale(1.1);
 }

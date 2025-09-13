@@ -1,0 +1,33 @@
+@font-face {
+	font-family: "8BitOperator";
+	src: url("/common/fonts/8_bit_operator/8bitOperatorPlus-Regular.ttf");
+}
+
+@font-face {
+	font-family: "8BitOperator";
+	src: url("/common/fonts/8_bit_operator/8bitOperatorPlus-Bold.ttf");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "8BitOperatorPlus";
+	src: url("/common/fonts/8_bit_operator/8bitOperatorPlus8-Regular.ttf");
+}
+
+@font-face {
+	font-family: "8BitOperatorPlus";
+	src: url("/common/fonts/8_bit_operator/8bitOperatorPlus8-Bold.ttf");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "8BitOperatorPlusSC";
+	src: url("/common/fonts/8_bit_operator/8bitOperatorPlusSC-Regular.ttf");
+}
+
+@font-face {
+	font-family: "8BitOperatorPlusSC";
+	src: url("/common/fonts/8_bit_operator/8bitOperatorPlusSC-Bold.ttf");
+	font-weight: bold;
+}
+
