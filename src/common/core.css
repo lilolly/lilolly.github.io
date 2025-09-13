@@ -1,0 +1,46 @@
+:root {
+	--ly_background: #F3E6DE;
+	--ly_background_accent: #F7EEE9;
+
+	--ly_yellow: #F4AE69;
+	--ly_yellow_dark: #BA8550;
+
+	--ly_pink: #F0B2B7;
+	--ly_pink_dark: #B7888C;
+
+	--ly_teal: #A3CEC5;
+	--ly_teal_dark: #7C9D96;
+
+	--ly_red: #F07E66;
+	--ly_red_dark: #F07E66;
+
+	--border_thickness: 1px;
+}
+
+body {
+	background-image: 
+		linear-gradient(var(--ly_background_accent) 2px, transparent 2px),
+		linear-gradient(to right, var(--ly_background_accent) 2px, transparent 2px);
+	background-size: 32px 32px;
+	background-color: var(--ly_background);
+	height: 98vh;
+}
+
+#core {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between
+}
+
+#left {
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+}
+
+#right {
+	width: 67%;
+	margin: 4%;
+}
