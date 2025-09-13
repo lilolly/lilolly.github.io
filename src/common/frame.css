@@ -42,7 +42,7 @@
 }
 
 .frame_header {
-	height: 3.5%;
+	height: 31px;
 	border-style: none none solid none;
 	border-width: var(--border_thickness);
 	display: flex;
@@ -59,17 +59,22 @@
 	justify-content: space-between;
 }
 
-.button_x {
-	aspect-ratio: 1/1;
-	height: 100%;
-	border-style: solid;
-	border-width: var(--border_thickness);
-}
 
 .button_min {
 	aspect-ratio: 1/1;
 	height: 100%;
 	border-style: solid;
+	border-width: var(--border_thickness);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.minimize {
+	width: 60%;
+	height: 60%;
+	border-style: none none solid none;
 	border-width: var(--border_thickness);
 }
 
@@ -78,4 +83,35 @@
 	height: 100%;
 	border-style: solid;
 	border-width: var(--border_thickness);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.maximize {
+	width: 60%;
+	height: 60%;
+	border-style: solid;
+	border-width: var(--border_thickness);
+}
+
+.button_x {
+	aspect-ratio: 1/1;
+	height: 100%;
+	border-style: solid;
+	border-width: var(--border_thickness);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button_x svg {
+	width: 60%;
+	height: 60%;
+	line {
+		stroke: #000000;
+		stroke-width: 1;
+	}
 }

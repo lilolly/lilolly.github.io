@@ -1,3 +1,5 @@
+import { FrameController } from "./frame_controller.js";
+
 class Navigation extends HTMLElement {
 	constructor() {
 		super();
@@ -17,16 +19,7 @@ class Navigation extends HTMLElement {
 			</div>
 
 			<div id="page_icon_frame">
-				<div class="frame_header">
-					<div class="frame_controllers">
-						<div class="button_x">
-						</div>
-						<div class="button_min">
-						</div>
-						<div class="button_max">
-						</div>
-					</div>
-				</div>
+				<frame-controller></frame-controller>
 				<div id="page_icon_content">
 					<img src="${src}"/>
 					<h1>${title}</h1>
@@ -36,16 +29,7 @@ class Navigation extends HTMLElement {
 
 		<div id="right">
 			<div id="page_content_frame">
-				<div class="frame_header">
-					<div class="frame_controllers">
-						<div class="button_x">
-						</div>
-						<div class="button_min">
-						</div>
-						<div class="button_max">
-						</div>
-					</div>
-				</div>
+				<frame-controller></frame-controller>
 				<ul>
 					<li>Think 1</li>
 					<li>Think 2</li>
