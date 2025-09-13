@@ -42,7 +42,7 @@
 }
 
 .frame_header {
-	height: 31px;
+	height: 3.5%;
 	border-style: none none solid none;
 	border-width: var(--border_thickness);
 	display: flex;
