@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/common/core.css"/>
+	<link rel="stylesheet" href="/common/navigation.css"/>
+
+	<link rel="stylesheet" href="/project/project.css"/>
+
+	<script src="/project/navigation_anchor.js" type="module"></script>
+
+	<!-- Edting items -->
+	<link class="editing_scripts"  rel="stylesheet" href="/project/new_project.css"/>
+	<script class="editing_scripts" src="/project/project_edit.js" type="module"></script>
+	<script class="editing_scripts">
+		function add_element() {
+			const step_input = document.getElementById("step_input");
+
+			const steps = document.getElementById("steps");
+			const node = document.createElement("li");
+			const text = document.createTextNode(step_input.value);
+
+			node.appendChild(text);
+			steps.appendChild(node);
+			step_input.value = "";
+		}
+
+		function clear_page() {
+			const class_name = "editing_scripts";
+			const about_element = document.querySelector(`#about .${class_name}`);
+			const journal_element = document.querySelector(`#project_journal .${class_name}`);
+
+			const about_text = about_element.value;
+			const journal_text = journal_element.value;
+
+			const about_p = document.createElement("p");
+			about_p.innerText = about_text;
+			const journal_p = document.createElement("p");
+			journal_p.innerText = journal_text;
+
+			about_element.replaceWith(about_p);
+			journal_element.replaceWith(journal_p);
+
+			const editing_scripts = document.getElementsByClassName(class_name);
+			const length = editing_scripts.length - 1;
+			for (element in editing_scripts) {
+				const single_element = editing_scripts[length - element];
+				if (single_element) {
+					single_element.remove();
+				}
+			}
+		}
+
+		function export_project() {
+			clear_page();
+		}
+	</script>
+
+	<title>Ly's Life</title>
+</head>
+<body id="custom-pattern">
+	<div id="core">
+
+		<div id="title">
+			<img class="title_bumpers" src="/icons/baby.png"></img>
+			<h1>TITLE!</h1>
+			<a class="title_bumpers" href="https://Ko-fi.com/lilolly">
+				<img src="/icons/kofi.png"></img>
+			</a>
+		</div>
+
+		<div id="project">
+
+			<div id="about">
+				<h2>About</h2>
+				<textarea class="editing_scripts" rows="10"></textarea>
+			</div>
+
+			<div id="project_journal">
+				<h2>Project Journal</h2>
+				<textarea class="editing_scripts" rows="10"></textarea>
+			</div>
+
+			<div id="project_steps">
+				<h2>Steps</h2>
+				<ul id="steps">
+				</ul>
+				<div class="editing_scripts" >
+					<input id="step_input" type="text" autocomplete="off"></input>
+					<button onClick="add_element();">Add</button>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	
+	<project-edit></project-edit>
+	<navigation-anchor type="baby"></navigation-anchor>
+
+</body>
+</html>
