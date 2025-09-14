@@ -4,8 +4,6 @@ class Category extends HTMLElement {
 	}
 
 	connectedCallback() {
-		//const type = this.getAttribute("type");
-
 		this.outerHTML = `
 		<h1>Baby</h1>
 

@@ -36,3 +36,7 @@ body {
 	margin-right: auto;
 	margin-bottom: 0;
 }
+
+.editing {
+	visibility: hidden;
+}
