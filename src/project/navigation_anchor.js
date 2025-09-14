@@ -23,7 +23,7 @@ class NavigationAnchor extends HTMLElement {
 		`;
 		}
 
-		this.outerHTML = `
+		this.innerHTML = `
 		<div id="navigation">
 			<div class="navigation_button" >
 				<span>
