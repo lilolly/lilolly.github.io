@@ -10,12 +10,7 @@ h2 {
 	text-align: center;
 	margin-top: 0;
 	padding-top: 0;
-	border-style: none none solid none;
-	border-width: 2px;
-}
-
-h3 {
-	font-size: 20pt;
+	background-color: gray;
 }
 
 ul {
@@ -45,5 +40,6 @@ li {
 		text-align: center;
 	}
 }
+
 
 
