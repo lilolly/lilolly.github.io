@@ -1,7 +1,7 @@
 @import url("/common/fonts.css");
 
 :root {
-	--ly_background: #F3E6DE;
+	--ly_background: #F0E3DA;
 	--ly_background_accent: #F7EEE9;
 
 	--ly_yellow: #F4AE69;
@@ -29,20 +29,9 @@ body {
 }
 
 #core {
-	width: 100%;
+	width: 80%;
 	height: 100%;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between
-}
-
-#left {
-	width: 33%;
-	display: flex;
-	flex-direction: column;
-}
-
-#right {
-	width: 67%;
-	margin: 4%;
+	margin-top: 5em;
+	margin-left: auto;
+	margin-right: auto;
 }

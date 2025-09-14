@@ -1,53 +1,46 @@
-#home_content_frame {
-	margin: auto;
-	height: 85%;
-	width: 90%;
-	background-color: var(--ly_background);
+h1 {
+	font-size: 32pt;
+	text-align: center;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+h2 {
+	font-size: 28pt;
+	text-align: center;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+h3 {
+	font-size: 20pt;
+}
+
+ul {
+	padding-left: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+li {
+	width: 6em;
+	padding: 1em;
+	margin-right:1em;
+	margin-bottom:1em;
 	border-style: solid;
-	border-width: var(--border_thickness);
+	border-width: 1px;
+	background-color: var(--ly_background);
+	img {
+		aspect-ratio: 1/1;
+		width: 100%;
+	}
+	span {
+		font-size: 14pt;
+		font-weight: bold;
+		text-align: center;
+	}
 }
 
-#home_content_frame .frame_header {
-	background-color: var(--ly_red);
-}
 
-#home_content {
-	display: flex;
-	align-items: stretch;
-	height: 96.5%;
-}
-
-#home_title {
-	height: 100%;
-	width: 25%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	border-style: none solid none none;
-	border-width: var(--border_thickness);
-}
-
-#home_title h1 {
-	font-family: "8BitOperator";
-	font-size: 36pt;
-}
-
-#home_links {
-	width: 75%;
-	display: flex;
-	flex-wrap : wrap;
-	align-items: center;
-	align-content: space-around;
-}
-
-.home_anchor {
-	width: 25%;
-	display: flex;
-	justify-content: center;
-}
-
-.home_anchor a:hover {
-	transform: scale(1.1);
-}

@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="/index.css"/>
 	<link rel="stylesheet" href="/common/core.css"/>
-	<link rel="stylesheet" href="/common/frame.css"/>
-	<link rel="stylesheet" href="/common/navigation.css"/>
+	<link rel="stylesheet" href="index.css"/>
 
-	<script src="/home_anchor.js" type="module"></script>
-	<script src="/common/navigation.js" type="module"></script>
-	<script src="/common/frame_controller.js" type="module"></script>
+	<script src="/project_anchor.js" type="module"></script>
 
-	<title>TODO</title>
+	<title>Ly's Life</title>
 </head>
 <body id="custom-pattern">
 	<div id="core">
+		<h1>Ly's Life</h1>
+		<h2>Project Lists Journal</h2>
 
-		<div id="home_content_frame">
-			<frame-controller></frame-controller>
-			<div id="home_content">
-				<div id="home_title">
-					<h1>Categories</h1>
-				</div>
-				<div id="home_links">
+		<h3>Recent Progress</h3>
+		<ul>
+			<project-anchor
+				link="01_something"
+				type="baby"
+				title="Thing 1"
+			></project-anchor>
 
-					<home-anchor link="crafting"></home-anchor>
-					<home-anchor link="travel"></home-anchor>
-					<home-anchor link="personal"></home-anchor>
-					<home-anchor link="social"></home-anchor>
+			<li>
+				<img src="/icons/dog.png"></img>
+				<span>Thing 2</span>
+			</li>
 
-					<home-anchor link="art"></home-anchor>
-					<home-anchor link="house"></home-anchor>
-					<home-anchor link="baby"></home-anchor>
-					<home-anchor link="blog"></home-anchor>
+			<li>
+				<img src="/icons/dog.png"></img>
+				<span>Thing 3</span>
+			</li>
 
-					<home-anchor link="cooking"></home-anchor>
-					<home-anchor link="work"></home-anchor>
-					<home-anchor link="dog"></home-anchor>
+			<li>
+				<img src="/icons/cooking.png"></img>
+				<span>Thing 4</span>
+			</li>
 
-				</div>
-			</div>
+			<li>
+				<img src="/icons/travel.png"></img>
+				<span>Thing 5</span>
+			</li>
 
-		</div>
+			<li>
+				<img src="/icons/social.png"></img>
+				<span>Thing 6</span>
+			</li>
+
+			<li>
+				<img src="/icons/baby.png"></img>
+				<span>Thing 7</span>
+			</li>
+		</ul>
+
+		<h3>Lots of Lists</h3>
+		<ul>
+			<li>thing 1</li>
+			<li>thing 2</li>
+			<li>thing 3</li>
+		</ul>
+
+		<h3>My Journal</h3>
+		<ul>
+			<li>thing 1</li>
+			<li>thing 2</li>
+			<li>thing 3</li>
+		</ul>
+
 	</div>
 </body>
 </html>
