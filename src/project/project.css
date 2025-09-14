@@ -37,6 +37,7 @@ p {
 
 #project {
 	display: flex;
+	padding-bottom: 6em;
 }
 
 #about {
