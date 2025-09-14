@@ -6,6 +6,23 @@ class NavigationAnchor extends HTMLElement {
 	connectedCallback() {
 		const type = this.getAttribute("type");
 
+		let anchor = "";
+		if (type === "none") {
+		anchor = ``;
+		} else if(type === "category") {
+		anchor = `
+		<a href="/project">
+			${type.toUpperCase()}
+		</a>
+		`;
+		} else {
+		anchor = `
+		<a href="/project/${type}.html">
+			${type.toUpperCase()}
+		</a>
+		`;
+		}
+
 		this.outerHTML = `
 		<div id="navigation">
 			<div class="navigation_button" >
@@ -17,9 +34,7 @@ class NavigationAnchor extends HTMLElement {
 			</div>
 			<div class="navigation_button" >
 				<span>
-					<a href="/project/${type}">
-						${type.toUpperCase()}
-					</a>
+					${anchor}
 				</span>
 			</div>
 		</div>

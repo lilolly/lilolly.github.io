@@ -12,7 +12,7 @@ class ProjectAnchor extends HTMLElement {
 
 		this.outerHTML = `
 		<li>
-			<a href="/project/${link}">
+			<a href="/project/baby/${link}">
 				<img src="/icons/${type}.png"/>
 			</a>
 			<span>${title}</span>

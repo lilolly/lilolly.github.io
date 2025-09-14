@@ -4,9 +4,10 @@
 	<link rel="stylesheet" href="/common/core.css"/>
 	<link rel="stylesheet" href="/common/navigation.css"/>
 
-	<link rel="stylesheet" href="/project/baby.css"/>
+	<link rel="stylesheet" href="/project/category.css"/>
 
 	<script src="/project_anchor.js" type="module"></script>
+	<script src="/project/navigation.js" type="module"></script>
 
 	<title>Ly's Life</title>
 </head>
@@ -18,11 +19,10 @@
 			<h2>Ongoing</h2>
 			<ul>
 				<project-anchor
-					link="01_something"
+					link="naza_toys"
 					type="baby"
 					title="Naza Toys"
 				></project-anchor>
-
 			</ul>
 		</div>
 
@@ -38,22 +38,7 @@
 
 	</div>
 
-	<div id="navigation">
-		<div class="navigation_button" >
-			<span>
-				<a href="/">
-					HOME
-				</a>
-			</span>
-		</div>
-		<div class="navigation_button" >
-			<span>
-				<a href="/project">
-					CATEGORIES
-				</a>
-			</span>
-		</div>
-	</div>
+	<navigation-anchor type="category"></navigation-anchor>
 
 </body>
 </html>
