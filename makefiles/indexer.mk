@@ -90,6 +90,8 @@ build/indexed: build/ \
 	src/project/social/ongoing_projects/index.html src/project/social/archived_projects/index.html \
 	src/project/travel/ongoing_projects/index.html src/project/travel/archived_projects/index.html \
 	src/project/work/ongoing_projects/index.html src/project/work/archived_projects/index.html 
+	echo ${baby_ongoing}
+	echo $^
 	touch $@
 
 purge_indexes:
