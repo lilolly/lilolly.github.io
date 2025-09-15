@@ -75,7 +75,7 @@ src/project/work/ongoing_projects/index.html: ${work_ongoing}
 src/project/work/archived_projects/index.html: ${work_archived}
 	./indexer.sh $@ archived work $^
 
-build/indexed: \
+build/indexed: build/ \
 	src/project/art/ongoing_projects/index.html src/project/art/archived_projects/index.html \
 	src/project/baby/ongoing_projects/index.html src/project/baby/archived_projects/index.html \
 	src/project/blog/ongoing_projects/index.html src/project/blog/archived_projects/index.html \
