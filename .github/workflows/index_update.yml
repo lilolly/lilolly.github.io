@@ -8,10 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build indexes
-      run: make purge_indexes build/indexed
+    - name: Clear Indexes
+      run: make purge_indexes 
+    - name: Rebuilding Indexes
+      run: make build/indexed
     - uses: EndBug/add-and-commit@v9
       with:
-        message: Show GitHub Actions logo
+        message: Updated Index
         committer_name: GitHub Actions
         committer_email: actions@github.com
