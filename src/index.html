@@ -6,6 +6,7 @@
 
 	<script src="/common/project_anchor.js" type="module"></script>
 
+	<script src="/import/htmx.min.js"></script>
 	<title>Ly's Life</title>
 </head>
 <body id="custom-pattern">
@@ -15,41 +16,72 @@
 
 		<h3>Recent Progress</h3>
 		<ul>
-			<project-anchor
-				link="naza_toys"
-				type="baby"
-				title="Naza Toys"
-			></project-anchor>
+			<div 
+				 hx-get="/project/art/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
 
-			<li>
-				<img src="/icons/dog.png"></img>
-				<span>Dog House</span>
-			</li>
+			<div 
+				 hx-get="/project/baby/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
 
-			<li>
-				<img src="/icons/dog.png"></img>
-				<span>Dog Leash</span>
-			</li>
+			<div 
+				 hx-get="/project/blog/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
 
-			<li>
-				<img src="/icons/cooking.png"></img>
-				<span>Cake Experiment</span>
-			</li>
+			<div 
+				 hx-get="/project/cooking/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
 
-			<li>
-				<img src="/icons/travel.png"></img>
-				<span>Repairing Bike</span>
-			</li>
+			<div 
+				 hx-get="/project/crafting/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
 
-			<li>
-				<img src="/icons/social.png"></img>
-				<span>Baby Reading Group</span>
-			</li>
+			<div 
+				 hx-get="/project/dog/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
 
-			<li>
-				<img src="/icons/baby.png"></img>
-				<span>Naza Clothes</span>
-			</li>
+			<div 
+				 hx-get="/project/house/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
+
+			<div 
+				 hx-get="/project/personal/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
+
+			<div 
+				 hx-get="/project/social/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
+
+			<div 
+				 hx-get="/project/travel/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
+
+			<div 
+				 hx-get="/project/work/ongoing_projects"
+				 hx-swap="outerHTML"
+				 hx-trigger="load">
+			</div>
+
 		</ul>
 
 		<h3>Lots of Lists</h3>
