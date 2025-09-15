@@ -8,10 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: PreFiles
+      run: ls -la src/project/baby/ongoing_projects
     - name: Clear Indexes
       run: make purge_indexes 
-    - name: Make Baby
-      run: make src/project/baby/ongoing_projects/index.html --debug
+    - name: Files
+      run: ls -la src/project/baby/ongoing_projects
     - name: Rebuilding Indexes
       run: make build/indexed --debug
     - uses: EndBug/add-and-commit@v9
