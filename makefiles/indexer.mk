@@ -75,9 +75,6 @@ src/project/work/ongoing_projects/index.html: ${work_ongoing}
 src/project/work/archived_projects/index.html: ${work_archived}
 	./indexer.sh $@ archived work $^
 
-build/:
-	mkdir $@
-
 build/indexed: \
 	src/project/art/ongoing_projects/index.html src/project/art/archived_projects/index.html \
 	src/project/baby/ongoing_projects/index.html src/project/baby/archived_projects/index.html \
@@ -89,7 +86,7 @@ build/indexed: \
 	src/project/personal/ongoing_projects/index.html src/project/personal/archived_projects/index.html \
 	src/project/social/ongoing_projects/index.html src/project/social/archived_projects/index.html \
 	src/project/travel/ongoing_projects/index.html src/project/travel/archived_projects/index.html \
-	src/project/work/ongoing_projects/index.html src/project/work/archived_projects/index.html | build/
+	src/project/work/ongoing_projects/index.html src/project/work/archived_projects/index.html 
 	touch $@
 
 purge_indexes:
