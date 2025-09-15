@@ -1,4 +1,4 @@
-import { export_project } from '/project/export_project.js';
+import { export_project } from '/project/new_project/export_project.js';
 import { disable_editing } from '/common/touch_detector.js';
 
 class EditButtons extends HTMLElement {
