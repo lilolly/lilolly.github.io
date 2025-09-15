@@ -11,7 +11,7 @@ jobs:
     - name: Clear Indexes
       run: make purge_indexes 
     - name: Checking
-      run: ls -la
+      run: make --version; bash --version
     - name: Rebuilding Indexes
       run: make build/indexed
     - uses: EndBug/add-and-commit@v9
