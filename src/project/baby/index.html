@@ -21,7 +21,7 @@
 		<div id="ongoing">
 			<h2>Ongoing</h2>
 			<ul 
-				 hx-get="/project/baby/ongoing_projects.html"
+				 hx-get="/project/baby/ongoing_projects"
 				 hx-swap="afterbegin"
 				 hx-trigger="load"
 			>
@@ -32,18 +32,18 @@
 					<span>New Project</span>
 				</li>
 			</ul>
-
 		</div>
 
 		<div id="archive">
 			<h2>Archived</h2>
-			<ul>
-				<li>
-					<img src="/icons/baby.png"></img>
-					<span>Naza Clothes</span>
-				</li>
+			<ul 
+				 hx-get="/project/baby/archived_projects"
+				 hx-swap="afterbegin"
+				 hx-trigger="load"
+			>
 			</ul>
 		</div>
+
 	</div>
 	<edit-buttons class="editing" type="category"></edit-buttons>
 	<navigation-anchor type="category"></navigation-anchor>

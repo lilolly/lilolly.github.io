@@ -4,13 +4,14 @@ class ProjectAnchor extends HTMLElement {
 	}
 
 	connectedCallback() {
+		const work_status = this.getAttribute("work_status");
 		const link = this.getAttribute("link");
 		const type = this.getAttribute("type");
 		const title = this.getAttribute("title");
 
 		this.outerHTML = `
 		<li>
-			<a href="/project/baby/${link}">
+			<a href="/project/baby/${work_status}_projects/${link}.html">
 				<img src="/icons/${type}.png"/>
 			</a>
 			<span>${title}</span>
