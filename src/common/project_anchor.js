@@ -8,8 +8,6 @@ class ProjectAnchor extends HTMLElement {
 		const type = this.getAttribute("type");
 		const title = this.getAttribute("title");
 
-		console.log(link, type, title);
-
 		this.outerHTML = `
 		<li>
 			<a href="/project/baby/${link}">

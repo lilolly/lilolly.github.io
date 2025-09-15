@@ -11,6 +11,7 @@
 	<script src="/project/navigation_anchor.js" type="module"></script>
 	<script src="/project/edit_buttons.js" type="module"></script>
 
+	<script src="/import/htmx.min.js"></script>
 	<title>Ly's Life</title>
 </head>
 <body id="custom-pattern">
@@ -19,13 +20,11 @@
 
 		<div id="ongoing">
 			<h2>Ongoing</h2>
-			<ul>
-				<project-anchor
-					link="naza_toys"
-					type="baby"
-					title="Naza Toys"
-				></project-anchor>
-
+			<ul 
+				 hx-get="/project/baby/ongoing_projects.html"
+				 hx-swap="afterbegin"
+				 hx-trigger="load"
+			>
 				<li class="editing">
 					<a href="/project/new_project?type=baby">
 						<img src="/icons/plus.png"></img>

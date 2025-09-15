@@ -17,7 +17,7 @@ class NavigationAnchor extends HTMLElement {
 		`;
 		} else {
 		anchor = `
-		<a href="/project/${type}.html">
+		<a href="/project/${type}">
 			${type.toUpperCase()}
 		</a>
 		`;
