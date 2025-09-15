@@ -1,4 +1,3 @@
-find src/project/*/{ongoing,archived}_projects -type f | \
+find src/project/$1/$2_projects -type f | \
 	grep -v index | \
-	sort | \
-	grep $1
+	sort

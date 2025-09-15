@@ -1,47 +1,79 @@
-art:=$(shell ./index_finder.sh art)
-baby:=$(shell ./index_finder.sh baby)
-blog:=$(shell ./index_finder.sh blog)
-cooking:=$(shell ./index_finder.sh cooking)
-crafting:=$(shell ./index_finder.sh crafting)
-dog:=$(shell ./index_finder.sh dog)
-house:=$(shell ./index_finder.sh house)
-personal:=$(shell ./index_finder.sh personal)
-social:=$(shell ./index_finder.sh social)
-travel:=$(shell ./index_finder.sh travel)
-work:=$(shell ./index_finder.sh work)
+art_ongoing:=$(shell ./index_finder.sh art ongoing)
+art_archived:=$(shell ./index_finder.sh art archived)
+src/project/art/ongoing_projects/index.html: ${art_ongoing}
+	./indexer.sh $@ ongoing art $^
+src/project/art/archived_projects/index.html: ${art_archived}
+	./indexer.sh $@ archived art $^
 
-src/project/art/%/index.html: ${art}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") art $^
+baby_ongoing:=$(shell ./index_finder.sh baby ongoing)
+baby_archived:=$(shell ./index_finder.sh baby archived)
+src/project/baby/ongoing_projects/index.html: ${baby_ongoing}
+	./indexer.sh $@ ongoing baby $^
+src/project/baby/archived_projects/index.html: ${baby_archived}
+	./indexer.sh $@ archived baby $^
 
-src/project/baby/%/index.html: ${baby}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") baby $^
+blog_ongoing:=$(shell ./index_finder.sh blog ongoing)
+blog_archived:=$(shell ./index_finder.sh blog archived)
+src/project/blog/ongoing_projects/index.html: ${blog_ongoing}
+	./indexer.sh $@ ongoing blog $^
+src/project/blog/archived_projects/index.html: ${blog_archived}
+	./indexer.sh $@ archived blog $^
 
-src/project/blog/%/index.html: ${blog}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") blog $^
+cooking_ongoing:=$(shell ./index_finder.sh cooking ongoing)
+cooking_archived:=$(shell ./index_finder.sh cooking archived)
+src/project/cooking/ongoing_projects/index.html: ${cooking_ongoing}
+	./indexer.sh $@ ongoing cooking $^
+src/project/cooking/archived_projects/index.html: ${cooking_archived}
+	./indexer.sh $@ archived cooking $^
 
-src/project/cooking/%/index.html: ${cooking}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") cooking $^
+crafting_ongoing:=$(shell ./index_finder.sh crafting ongoing)
+crafting_archived:=$(shell ./index_finder.sh crafting archived)
+src/project/crafting/ongoing_projects/index.html: ${crafting_ongoing}
+	./indexer.sh $@ ongoing crafting $^
+src/project/crafting/archived_projects/index.html: ${crafting_archived}
+	./indexer.sh $@ archived crafting $^
 
-src/project/crafting/%/index.html: ${crafting}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") crafting $^
+dog_ongoing:=$(shell ./index_finder.sh dog ongoing)
+dog_archived:=$(shell ./index_finder.sh dog archived)
+src/project/dog/ongoing_projects/index.html: ${dog_ongoing}
+	./indexer.sh $@ ongoing dog $^
+src/project/dog/archived_projects/index.html: ${dog_archived}
+	./indexer.sh $@ archived dog $^
 
-src/project/dog/%/index.html: ${dog}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") dog $^
+house_ongoing:=$(shell ./index_finder.sh house ongoing)
+house_archived:=$(shell ./index_finder.sh house archived)
+src/project/house/ongoing_projects/index.html: ${house_ongoing}
+	./indexer.sh $@ ongoing house $^
+src/project/house/archived_projects/index.html: ${house_archived}
+	./indexer.sh $@ archived house $^
 
-src/project/house/%/index.html: ${house}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") house $^
+personal_ongoing:=$(shell ./index_finder.sh personal ongoing)
+personal_archived:=$(shell ./index_finder.sh personal archived)
+src/project/personal/ongoing_projects/index.html: ${personal_ongoing}
+	./indexer.sh $@ ongoing personal $^
+src/project/personal/archived_projects/index.html: ${personal_archived}
+	./indexer.sh $@ archived personal $^
 
-src/project/personal/%/index.html: ${personal}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") personal $^
+social_ongoing:=$(shell ./index_finder.sh social ongoing)
+social_archived:=$(shell ./index_finder.sh social archived)
+src/project/social/ongoing_projects/index.html: ${social_ongoing}
+	./indexer.sh $@ ongoing social $^
+src/project/social/archived_projects/index.html: ${social_archived}
+	./indexer.sh $@ archived social $^
 
-src/project/social/%/index.html: ${social}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") social $^
+travel_ongoing:=$(shell ./index_finder.sh travel ongoing)
+travel_archived:=$(shell ./index_finder.sh travel archived)
+src/project/travel/ongoing_projects/index.html: ${travel_ongoing}
+	./indexer.sh $@ ongoing travel $^
+src/project/travel/archived_projects/index.html: ${travel_archived}
+	./indexer.sh $@ archived travel $^
 
-src/project/travel/%/index.html: ${travel}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") travel $^
-
-src/project/work/%/index.html: ${work}
-	./indexer.sh $@ $(shell echo $* | sed "s|_projects||") work $^
+work_ongoing:=$(shell ./index_finder.sh work ongoing)
+work_archived:=$(shell ./index_finder.sh work archived)
+src/project/work/ongoing_projects/index.html: ${work_ongoing}
+	./indexer.sh $@ ongoing work $^
+src/project/work/archived_projects/index.html: ${work_archived}
+	./indexer.sh $@ archived work $^
 
 build/:
 	mkdir $@
