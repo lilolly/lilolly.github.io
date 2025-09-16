@@ -1,2 +1,0 @@
-
-ANCHOR="<project-anchor work_status='ongoing' link='09_14.naza_toys' type='baby' title='Naza Toys'></project-anchor>"

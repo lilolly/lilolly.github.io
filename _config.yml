@@ -1,2 +1,8 @@
-title: Ly Site
-source: src
+exclude:
+  - Makefile
+  - makefiles/
+  - scripts/
+  - .github/
+  - .git
+  - .gitattributes/
+  - .gitignore

@@ -1,96 +1,99 @@
-art_ongoing:=$(shell ./index_finder.sh art ongoing)
-art_archived:=$(shell ./index_finder.sh art archived)
-src/project/art/ongoing_projects/index.html: ${art_ongoing}
-	./indexer.sh $@ ongoing art $^
-src/project/art/archived_projects/index.html: ${art_archived}
-	./indexer.sh $@ archived art $^
+INDEX_FINDER_SCRIPT:="./makefiles/index_finder.sh"
+INDEXER_SCRIPT:="./makefiles/indexer.sh"
 
-baby_ongoing:=$(shell ./index_finder.sh baby ongoing)
-baby_archived:=$(shell ./index_finder.sh baby archived)
-src/project/baby/ongoing_projects/index.html: ${baby_ongoing}
-	./indexer.sh $@ ongoing baby $^
-src/project/baby/archived_projects/index.html: ${baby_archived}
-	./indexer.sh $@ archived baby $^
+art_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} art ongoing)
+art_archived:=$(shell ${INDEX_FINDER_SCRIPT} art archived)
+project/art/ongoing_projects/index.html: ${art_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing art $^
+project/art/archived_projects/index.html: ${art_archived}
+	${INDEXER_SCRIPT} $@ archived art $^
 
-blog_ongoing:=$(shell ./index_finder.sh blog ongoing)
-blog_archived:=$(shell ./index_finder.sh blog archived)
-src/project/blog/ongoing_projects/index.html: ${blog_ongoing}
-	./indexer.sh $@ ongoing blog $^
-src/project/blog/archived_projects/index.html: ${blog_archived}
-	./indexer.sh $@ archived blog $^
+baby_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} baby ongoing)
+baby_archived:=$(shell ${INDEX_FINDER_SCRIPT} baby archived)
+project/baby/ongoing_projects/index.html: ${baby_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing baby $^
+project/baby/archived_projects/index.html: ${baby_archived}
+	${INDEXER_SCRIPT} $@ archived baby $^
 
-cooking_ongoing:=$(shell ./index_finder.sh cooking ongoing)
-cooking_archived:=$(shell ./index_finder.sh cooking archived)
-src/project/cooking/ongoing_projects/index.html: ${cooking_ongoing}
-	./indexer.sh $@ ongoing cooking $^
-src/project/cooking/archived_projects/index.html: ${cooking_archived}
-	./indexer.sh $@ archived cooking $^
+blog_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} blog ongoing)
+blog_archived:=$(shell ${INDEX_FINDER_SCRIPT} blog archived)
+project/blog/ongoing_projects/index.html: ${blog_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing blog $^
+project/blog/archived_projects/index.html: ${blog_archived}
+	${INDEXER_SCRIPT} $@ archived blog $^
 
-crafting_ongoing:=$(shell ./index_finder.sh crafting ongoing)
-crafting_archived:=$(shell ./index_finder.sh crafting archived)
-src/project/crafting/ongoing_projects/index.html: ${crafting_ongoing}
-	./indexer.sh $@ ongoing crafting $^
-src/project/crafting/archived_projects/index.html: ${crafting_archived}
-	./indexer.sh $@ archived crafting $^
+cooking_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} cooking ongoing)
+cooking_archived:=$(shell ${INDEX_FINDER_SCRIPT} cooking archived)
+project/cooking/ongoing_projects/index.html: ${cooking_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing cooking $^
+project/cooking/archived_projects/index.html: ${cooking_archived}
+	${INDEXER_SCRIPT} $@ archived cooking $^
 
-dog_ongoing:=$(shell ./index_finder.sh dog ongoing)
-dog_archived:=$(shell ./index_finder.sh dog archived)
-src/project/dog/ongoing_projects/index.html: ${dog_ongoing}
-	./indexer.sh $@ ongoing dog $^
-src/project/dog/archived_projects/index.html: ${dog_archived}
-	./indexer.sh $@ archived dog $^
+crafting_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} crafting ongoing)
+crafting_archived:=$(shell ${INDEX_FINDER_SCRIPT} crafting archived)
+project/crafting/ongoing_projects/index.html: ${crafting_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing crafting $^
+project/crafting/archived_projects/index.html: ${crafting_archived}
+	${INDEXER_SCRIPT} $@ archived crafting $^
 
-house_ongoing:=$(shell ./index_finder.sh house ongoing)
-house_archived:=$(shell ./index_finder.sh house archived)
-src/project/house/ongoing_projects/index.html: ${house_ongoing}
-	./indexer.sh $@ ongoing house $^
-src/project/house/archived_projects/index.html: ${house_archived}
-	./indexer.sh $@ archived house $^
+dog_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} dog ongoing)
+dog_archived:=$(shell ${INDEX_FINDER_SCRIPT} dog archived)
+project/dog/ongoing_projects/index.html: ${dog_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing dog $^
+project/dog/archived_projects/index.html: ${dog_archived}
+	${INDEXER_SCRIPT} $@ archived dog $^
 
-personal_ongoing:=$(shell ./index_finder.sh personal ongoing)
-personal_archived:=$(shell ./index_finder.sh personal archived)
-src/project/personal/ongoing_projects/index.html: ${personal_ongoing}
-	./indexer.sh $@ ongoing personal $^
-src/project/personal/archived_projects/index.html: ${personal_archived}
-	./indexer.sh $@ archived personal $^
+house_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} house ongoing)
+house_archived:=$(shell ${INDEX_FINDER_SCRIPT} house archived)
+project/house/ongoing_projects/index.html: ${house_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing house $^
+project/house/archived_projects/index.html: ${house_archived}
+	${INDEXER_SCRIPT} $@ archived house $^
 
-social_ongoing:=$(shell ./index_finder.sh social ongoing)
-social_archived:=$(shell ./index_finder.sh social archived)
-src/project/social/ongoing_projects/index.html: ${social_ongoing}
-	./indexer.sh $@ ongoing social $^
-src/project/social/archived_projects/index.html: ${social_archived}
-	./indexer.sh $@ archived social $^
+personal_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} personal ongoing)
+personal_archived:=$(shell ${INDEX_FINDER_SCRIPT} personal archived)
+project/personal/ongoing_projects/index.html: ${personal_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing personal $^
+project/personal/archived_projects/index.html: ${personal_archived}
+	${INDEXER_SCRIPT} $@ archived personal $^
 
-travel_ongoing:=$(shell ./index_finder.sh travel ongoing)
-travel_archived:=$(shell ./index_finder.sh travel archived)
-src/project/travel/ongoing_projects/index.html: ${travel_ongoing}
-	./indexer.sh $@ ongoing travel $^
-src/project/travel/archived_projects/index.html: ${travel_archived}
-	./indexer.sh $@ archived travel $^
+social_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} social ongoing)
+social_archived:=$(shell ${INDEX_FINDER_SCRIPT} social archived)
+project/social/ongoing_projects/index.html: ${social_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing social $^
+project/social/archived_projects/index.html: ${social_archived}
+	${INDEXER_SCRIPT} $@ archived social $^
 
-work_ongoing:=$(shell ./index_finder.sh work ongoing)
-work_archived:=$(shell ./index_finder.sh work archived)
-src/project/work/ongoing_projects/index.html: ${work_ongoing}
-	./indexer.sh $@ ongoing work $^
-src/project/work/archived_projects/index.html: ${work_archived}
-	./indexer.sh $@ archived work $^
+travel_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} travel ongoing)
+travel_archived:=$(shell ${INDEX_FINDER_SCRIPT} travel archived)
+project/travel/ongoing_projects/index.html: ${travel_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing travel $^
+project/travel/archived_projects/index.html: ${travel_archived}
+	${INDEXER_SCRIPT} $@ archived travel $^
+
+work_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} work ongoing)
+work_archived:=$(shell ${INDEX_FINDER_SCRIPT} work archived)
+project/work/ongoing_projects/index.html: ${work_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing work $^
+project/work/archived_projects/index.html: ${work_archived}
+	${INDEXER_SCRIPT} $@ archived work $^
 
 build/:
 	mkdir $@
 
 build/indexed: build/ \
-	src/project/art/ongoing_projects/index.html src/project/art/archived_projects/index.html \
-	src/project/baby/ongoing_projects/index.html src/project/baby/archived_projects/index.html \
-	src/project/blog/ongoing_projects/index.html src/project/blog/archived_projects/index.html \
-	src/project/cooking/ongoing_projects/index.html src/project/cooking/archived_projects/index.html \
-	src/project/crafting/ongoing_projects/index.html src/project/crafting/archived_projects/index.html \
-	src/project/dog/ongoing_projects/index.html src/project/dog/archived_projects/index.html \
-	src/project/house/ongoing_projects/index.html src/project/house/archived_projects/index.html \
-	src/project/personal/ongoing_projects/index.html src/project/personal/archived_projects/index.html \
-	src/project/social/ongoing_projects/index.html src/project/social/archived_projects/index.html \
-	src/project/travel/ongoing_projects/index.html src/project/travel/archived_projects/index.html \
-	src/project/work/ongoing_projects/index.html src/project/work/archived_projects/index.html 
+	project/art/ongoing_projects/index.html project/art/archived_projects/index.html \
+	project/baby/ongoing_projects/index.html project/baby/archived_projects/index.html \
+	project/blog/ongoing_projects/index.html project/blog/archived_projects/index.html \
+	project/cooking/ongoing_projects/index.html project/cooking/archived_projects/index.html \
+	project/crafting/ongoing_projects/index.html project/crafting/archived_projects/index.html \
+	project/dog/ongoing_projects/index.html project/dog/archived_projects/index.html \
+	project/house/ongoing_projects/index.html project/house/archived_projects/index.html \
+	project/personal/ongoing_projects/index.html project/personal/archived_projects/index.html \
+	project/social/ongoing_projects/index.html project/social/archived_projects/index.html \
+	project/travel/ongoing_projects/index.html project/travel/archived_projects/index.html \
+	project/work/ongoing_projects/index.html project/work/archived_projects/index.html 
 	touch $@
 
 purge_indexes:
-	rm -rf src/project/{art,baby,blog,cooking,crafting,dog,house,social,personal,travel,work}/{archived,ongoing}_projects/index.html
+	rm -rf project/{art,baby,blog,cooking,crafting,dog,house,social,personal,travel,work}/{archived,ongoing}_projects/index.html
