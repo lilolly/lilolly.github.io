@@ -93,4 +93,5 @@ build/indexed: build/ \
 	touch $@
 
 purge_indexes:
+	echo src/project/{art,baby,blog,cooking,crafting,dog,house,social,personal,travel,work}/{archived,ongoing}_projects/index.html
 	rm -rf src/project/{art,baby,blog,cooking,crafting,dog,house,social,personal,travel,work}/{archived,ongoing}_projects/index.html

@@ -9,8 +9,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: PreFiles
-      run: echo hello_{world,moon}
-    - name: PreFiles
       run: ls -la src/project/baby/ongoing_projects
     - name: Clear Indexes
       run: make purge_indexes 
