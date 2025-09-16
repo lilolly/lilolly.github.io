@@ -8,16 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: PreFiles
-      run: ls -la src/project/baby/ongoing_projects
-    - name: Clear Indexes
-      run: make purge_indexes 
-    - name: Files
-      run: ls -la src/project/baby/ongoing_projects
-    - name: Rebuilding Indexes
-      run: make build/indexed --debug
+    - name: Remaking Indexes
+      run: make purge_indexes build/indexed 
     - uses: EndBug/add-and-commit@v9
       with:
         message: Updated Index
         committer_name: GitHub Actions
         committer_email: actions@github.com
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
