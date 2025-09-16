@@ -21,7 +21,7 @@ jobs:
 
       - name: Backing up Indexes
         uses: EndBug/add-and-commit@v9
-        with: make purge_indexes build/indexed 
+        with:
           message: Updated Index
           committer_name: GitHub Actions
           committer_email: actions@github.com
