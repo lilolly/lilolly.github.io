@@ -78,41 +78,19 @@ src/project/work/archived_projects/index.html: ${work_archived}
 build/:
 	mkdir $@
 
-build/indexed: \
-	src/project/art/ongoing_projects/index.html \
-	src/project/art/archived_projects/index.html \
-	\
-	src/project/baby/ongoing_projects/index.html \
-	src/project/baby/archived_projects/index.html \
-	\
-	src/project/blog/ongoing_projects/index.html \
-	src/project/blog/archived_projects/index.html \
-	\
-	src/project/cooking/ongoing_projects/index.html \
-	src/project/cooking/archived_projects/index.html \
-	\
-	src/project/crafting/ongoing_projects/index.html \
-	src/project/crafting/archived_projects/index.html \
-	\
-	src/project/dog/ongoing_projects/index.html \
-	src/project/dog/archived_projects/index.html \
-	\
-	src/project/house/ongoing_projects/index.html \
-	src/project/house/archived_projects/index.html \
-	\
-	src/project/personal/ongoing_projects/index.html \
-	src/project/personal/archived_projects/index.html \
-	\
-	src/project/social/ongoing_projects/index.html \
-	src/project/social/archived_projects/index.html \
-	\
-	src/project/travel/ongoing_projects/index.html \
-	src/project/travel/archived_projects/index.html \
-	\
-	src/project/work/ongoing_projects/index.html \
-	src/project/work/archived_projects/index.html \
-	| build/
+build/indexed: build/ \
+	src/project/art/ongoing_projects/index.html src/project/art/archived_projects/index.html \
+	src/project/baby/ongoing_projects/index.html src/project/baby/archived_projects/index.html \
+	src/project/blog/ongoing_projects/index.html src/project/blog/archived_projects/index.html \
+	src/project/cooking/ongoing_projects/index.html src/project/cooking/archived_projects/index.html \
+	src/project/crafting/ongoing_projects/index.html src/project/crafting/archived_projects/index.html \
+	src/project/dog/ongoing_projects/index.html src/project/dog/archived_projects/index.html \
+	src/project/house/ongoing_projects/index.html src/project/house/archived_projects/index.html \
+	src/project/personal/ongoing_projects/index.html src/project/personal/archived_projects/index.html \
+	src/project/social/ongoing_projects/index.html src/project/social/archived_projects/index.html \
+	src/project/travel/ongoing_projects/index.html src/project/travel/archived_projects/index.html \
+	src/project/work/ongoing_projects/index.html src/project/work/archived_projects/index.html 
 	touch $@
 
 purge_indexes:
-	rm -rf src/project/*/{archived,ongoing}_projects/index.html
+	rm -rf src/project/{art,baby,blog,cooking,crafting,dog,house,social,personal,travel,work}/{archived,ongoing}_projects/index.html

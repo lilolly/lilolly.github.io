@@ -8,12 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Clear Indexes
-      run: make purge_indexes 
-    - name: Checking
-      run: ls -la
-    - name: Rebuilding Indexes
-      run: make build/indexed
+    - name: Remaking Indexes
+      run: make purge_indexes build/indexed 
     - uses: EndBug/add-and-commit@v9
       with:
         message: Updated Index
