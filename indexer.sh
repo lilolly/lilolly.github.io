@@ -1,3 +1,5 @@
+#!/bin/bash
+
 anchor() {
 	FILE_NAME=$(echo $4 | sed "s|.*\/||" | sed "s|\.html||")
 
