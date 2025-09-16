@@ -15,5 +15,3 @@ jobs:
         message: Updated Index
         committer_name: GitHub Actions
         committer_email: actions@github.com
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
