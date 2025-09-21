@@ -17,17 +17,17 @@
 </head>
 <body id="custom-pattern">
 	<div id="core">
-		<h1>Cooking</h1>
+		<h1>{CATEGORY}</h1>
 
 		<div id="ongoing">
 			<h2>Ongoing</h2>
 			<ul 
-				 hx-get="/project/cooking/ongoing_projects"
+				 hx-get="/project/{category}/ongoing_projects"
 				 hx-swap="afterbegin"
 				 hx-trigger="load"
 			>
 				<li class="editing">
-					<a href="/project/new_project?type=cooking">
+					<a href="/project/new_project?type={category}">
 						<img src="/icons/plus.png"></img>
 					</a>
 					<span>New Project</span>
@@ -38,7 +38,7 @@
 		<div id="archive">
 			<h2>Archived</h2>
 			<ul 
-				 hx-get="/project/cooking/archived_projects"
+				 hx-get="/project/{category}/archived_projects"
 				 hx-swap="afterbegin"
 				 hx-trigger="load"
 			>
@@ -50,4 +50,3 @@
 	<navigation-anchor type="category"></navigation-anchor>
 </body>
 </html>
-

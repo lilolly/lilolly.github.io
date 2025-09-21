@@ -39,7 +39,9 @@ export function export_project() {
 ${document.head.outerHTML}
 ${document.body.outerHTML}`;
 	navigator.clipboard.writeText(full_dom);
-
+	
+	const new_path = redirect_new_page('bekreth', 'main', 'baby');
+	window.location.replace(new_path);
 }
 
 function make_image(text) {
@@ -52,4 +54,9 @@ function make_paragraph(text) {
 	const paragraph = document.createElement("p");
 	paragraph.innerText = text;
 	return paragraph;
+}
+
+function redirect_new_page(username, branch, category) {
+	const home = `https://github.com/${username}/${username}.github.io/new/${branch}`
+	return `${home}/project/${category}/ongoing_projects`
 }

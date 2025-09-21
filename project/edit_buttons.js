@@ -1,5 +1,5 @@
 import { export_project } from '/project/new_project/export_project.js';
-import { disable_editing } from '/common/touch_detector.js';
+import { disable_editing, enable_editing } from '/common/edit_view.js';
 
 class EditButtons extends HTMLElement {
 	constructor() {
@@ -7,6 +7,7 @@ class EditButtons extends HTMLElement {
 	}
 
 	connectedCallback() {
+		//TODO: Add enable_editing
 		const type = this.getAttribute("type");
 
 		let button_text;
