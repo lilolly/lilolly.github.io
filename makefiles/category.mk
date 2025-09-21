@@ -17,6 +17,3 @@ build/categories: build/ \
 	project/travel/index.html \
 	project/work/index.html 
 	touch $@
-
-purge_categories:
-	rm project/*/index.html

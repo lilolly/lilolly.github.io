@@ -7,7 +7,6 @@ class EditButtons extends HTMLElement {
 	}
 
 	connectedCallback() {
-		//TODO: Add enable_editing
 		const type = this.getAttribute("type");
 
 		let button_text;
