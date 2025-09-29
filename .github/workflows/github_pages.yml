@@ -2,6 +2,9 @@ name: GitHub Pages Build
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -18,13 +21,6 @@ jobs:
 
       - name: Rebuilding Indexes
         run: make build/indexed build/categories
-
-      - name: Backing up Indexes
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: Updated Index
-          committer_name: GitHub Actions
-          committer_email: actions@github.com
 
       - name: ❌ Turn off LFS
         run: >-
