@@ -6,13 +6,13 @@
 	<link rel="stylesheet" href="/common/navigation.css"/>
 
 	<link rel="stylesheet" href="/project/category.css"/>
-	<link rel="stylesheet" href="/project/edit_buttons.css"/>
 
 	<script src="/common/project_anchor.js" type="module"></script>
 	<script src="/project/navigation_anchor.js" type="module"></script>
-	<script src="/project/edit_buttons.js" type="module"></script>
+	<script src="/project/new_project_button.js" type="module"></script>
 
 	<script src="/import/htmx.min.js"></script>
+	<script src="/import/js.cookie.min.js"></script>
 	<title>Ly's Life</title>
 </head>
 <body id="custom-pattern">
@@ -26,12 +26,10 @@
 				 hx-swap="afterbegin"
 				 hx-trigger="load"
 			>
-				<li class="editing">
-					<a href="/project/new_project?type=work">
-						<img src="/icons/plus.png"></img>
-					</a>
-					<span>New Project</span>
-				</li>
+				<new-project-button 
+					src="/icons/plus.png" 
+					href="/project/new_project?type=work">
+				</new-project-button>
 			</ul>
 		</div>
 
@@ -46,8 +44,6 @@
 		</div>
 
 	</div>
-	<edit-buttons class="editing" type="category"></edit-buttons>
 	<navigation-anchor type="category"></navigation-anchor>
 </body>
 </html>
-

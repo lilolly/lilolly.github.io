@@ -9,3 +9,27 @@ function add_element() {
 	steps.appendChild(node);
 	step_input.value = "";
 }
+
+function attempt_prepopulate() {
+	const url = window.localStorage.getItem("url_path");
+	if (url === null) {
+		return;
+	}
+
+	document.getElementById("title_input")
+		.value = window.localStorage.getItem("title");
+	document.getElementById("about")
+		.getElementsByTagName("textarea")[0]
+		.value = window.localStorage.getItem("about");
+	document.getElementById("project_journal")
+		.getElementsByTagName("textarea")[0]
+		.value = window.localStorage.getItem("journal");
+
+	window.localStorage.getItem("steps")
+		.split("\n")
+		.forEach(step => {
+			document.getElementById("step_input")
+				.value = step;
+			add_element();
+		});
+}

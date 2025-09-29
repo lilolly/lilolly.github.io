@@ -10,13 +10,14 @@
 	<script src="/project/navigation_anchor.js" type="module"></script>
 	<script src="/project/edit_buttons.js" type="module"></script>
 
+	<script src="/import/js.cookie.min.js"></script>
 	<title>Ly's Life</title>
 	<link class="editing_scripts"  rel="stylesheet" href="/project/new_project/index.css"/>
-	<script class="editing_scripts" src="/project/new_project/export_project.js" type="module"></script>
+	<script class="editing_scripts" src="/project/new_project/export_buttons.js" type="module"></script>
 	<script class="editing_scripts" src="/project/new_project/type_icon.js" type="module"></script>
 	<script class="editing_scripts" src="/project/new_project/index.js" type="text/javascript"></script>
 </head>
-<body id="custom-pattern">
+<body id="custom-pattern" onload='attempt_prepopulate()'>
 	<div id="core">
 		<div id="title">
 			<type-icon></type-icon>
@@ -52,7 +53,8 @@
 			</div>
 		</div>
 	</div>
-	<edit-buttons class="editing_scripts" type="project"></edit-buttons>
+	<export-buttons class="editing_scripts"></export-buttons>
+	<edit-buttons category="baby"></edit-buttons>
 	<navigation-anchor type="baby"></navigation-anchor>
 </body>
 </html>
