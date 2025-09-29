@@ -1,2 +1,5 @@
 *.swp
 build/
+
+project/{art,baby,blog,cooking,crafting,dog,house,personal,social,travel,work}/index.html
+project/{art,baby,blog,cooking,crafting,dog,house,personal,social,travel,work}/{ongoing,archived}_project/index.html

@@ -17,7 +17,7 @@ jobs:
           lfs: true       # Fetch large files
 
       - name: Rebuilding Indexes
-        run: make purge_indexes build/indexed 
+        run: make build/indexed build/categories
 
       - name: Backing up Indexes
         uses: EndBug/add-and-commit@v9
