@@ -20,7 +20,7 @@ export function export_project() {
 
 	for (const text of journal_text.split("\n")) {
 		document.getElementById("project_journal")
-			.appendChild(text.startsWith("https://") 
+			.appendChild(text.startsWith("https://")
 				? make_image(text)
 				: make_paragraph(text)
 			);
@@ -39,7 +39,12 @@ export function export_project() {
 ${document.head.outerHTML}
 ${document.body.outerHTML}`;
 	navigator.clipboard.writeText(full_dom);
-
+	
+	if (window.localStorage.getItem("url_path") !== null) {
+		redirect_edit_page('bekreth', 'main',);
+	} else {
+		redirect_new_page('bekreth', 'main', 'baby');
+	}
 }
 
 function make_image(text) {
@@ -52,4 +57,16 @@ function make_paragraph(text) {
 	const paragraph = document.createElement("p");
 	paragraph.innerText = text;
 	return paragraph;
+}
+
+function redirect_edit_page(username, branch) {
+	const home = `https://github.com/${username}/${username}.github.io/edit/${branch}`
+	const path = window.localStorage.getItem('url_path');
+	window.localStorage.removeItem("url_path");
+	window.location.replace(`${home}/${path}`);
+}
+
+function redirect_new_page(username, branch, category) {
+	const home = `https://github.com/${username}/${username}.github.io/new/${branch}`
+	window.location.replace(`${home}/project/${category}/ongoing_projects`);
 }

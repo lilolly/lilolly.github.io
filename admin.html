@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<link rel="stylesheet" href="/common/core.css"/>
+	<link rel="stylesheet" href="index.css"/>
+	<script src="/import/js.cookie.min.js"></script>
+	<script>
+		function display_admin_status() {
+			const admin_status = Cookies.get('admin') === 'true' ? 'Enabled' : 'Disabled';
+			document.getElementsByTagName("h2")[0]
+				.innerText = `Admin status is ${admin_status}`;
+		}
+
+		function enable() {
+			Cookies.set('admin', true); 
+			display_admin_status();
+		}
+
+		function disable() {
+			Cookies.set('admin', false); 
+			display_admin_status();
+		}
+	</script>
+	<title>Ly's Life</title>
+</head>
+<body id="custom-pattern" onload='display_admin_status();'>
+	<div id="core">
+		<h1>Admin Page</h1>
+		<h2 >
+		</h2>
+		<h3>
+			<button onClick="enable();">
+				Enable Admin
+			</button>
+			<button onClick="disable();">
+				Disable Admin
+			</button>
+		</h3>
+
+	</div>
+</body>
+</html>
