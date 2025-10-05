@@ -1,8 +1,2 @@
 *.swp
 build/
-
-project/*/index.html
-!project/new_project/index.html
-
-project/*/archived_projects/index.html
-project/*/ongoing_projects/index.html
