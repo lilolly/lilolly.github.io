@@ -46,9 +46,9 @@ ${document.body.outerHTML}`;
 	navigator.clipboard.writeText(full_dom);
 	
 	if (window.localStorage.getItem("url_path") !== null) {
-		redirect_edit_page('liloly', 'main',);
+		redirect_edit_page('lilolly', 'main',);
 	} else {
-		redirect_new_page('liloly', 'main', type);
+		redirect_new_page('lilolly', 'main', type);
 	}
 }
 
