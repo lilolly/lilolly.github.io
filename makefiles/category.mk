@@ -17,3 +17,6 @@ build/categories: build/ \
 	project/travel/index.html \
 	project/work/index.html 
 	touch $@
+
+purge_categories:
+	rm project/{art,baby,blog,cooking,crafting,dog,house,personal,social,travel,work}/index.html

@@ -2,6 +2,9 @@ name: GitHub Pages Build
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -17,14 +20,7 @@ jobs:
           lfs: true       # Fetch large files
 
       - name: Rebuilding Indexes
-        run: make purge_indexes build/indexed 
-
-      - name: Backing up Indexes
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: Updated Index
-          committer_name: GitHub Actions
-          committer_email: actions@github.com
+        run: make build/indexed build/categories
 
       - name: ❌ Turn off LFS
         run: >-
