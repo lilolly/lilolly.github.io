@@ -19,4 +19,4 @@ build/categories: build/ \
 	touch $@
 
 purge_categories:
-	rm project/{art,baby,blog,cooking,crafting,dog,house,personal,social,travel,work}/index.html
+	rm -rf project/{art,baby,blog,cooking,crafting,dog,house,personal,social,travel,work}/index.html
