@@ -7,6 +7,10 @@ class NewProjectButton extends HTMLElement {
 		return Cookies.get('admin') === 'true';
 	}
 
+	clear_session() {
+		window.localStorage.clear();
+	}
+
 	connectedCallback() {
 		if (!this.should_render()) {
 			this.outerHTML = "";
@@ -17,6 +21,7 @@ class NewProjectButton extends HTMLElement {
 
 		const anchor = document.createElement("a");
 		anchor.href = this.getAttribute("href");
+		anchor.onclick = this.clear_session;
 		anchor.appendChild(image);
 
 		const span = document.createElement("span");

@@ -19,7 +19,7 @@ jobs:
           lfs: true       # Fetch large files
 
       - name: Rebuilding Indexes
-        run: make purge_categories purge_indexes build/indexed build/categories
+        run: make site
 
       - name: ❌ Turn off LFS
         run: >-
