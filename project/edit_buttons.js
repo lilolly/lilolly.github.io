@@ -5,7 +5,7 @@ class EditButtons extends HTMLElement {
 		super();
 	}
 
-	edit_page(category) {
+	edit_page(type) {
 		window.localStorage.setItem("url_path", location.pathname);
 
 		const title = document.getElementsByTagName("h1")[0].innerText;
@@ -40,7 +40,7 @@ class EditButtons extends HTMLElement {
 			steps += "\n";
 		}
 		window.localStorage.setItem("steps", steps.trim());
-		location.href = `/project/new_project?type=${category}`
+		location.href = `/project/new_project?type=${type}`
 	}
 
 	should_render () {
@@ -53,13 +53,13 @@ class EditButtons extends HTMLElement {
 		if (!this.should_render()) {
 			return;
 		}
-		const category = this.getAttribute("category");
+		const type = this.getAttribute("type");
 
 		const button = document.createElement("button");
 		button.className = "edit_button";
 
 		button.innerHTML =  "EDIT";
-		button.onclick = () => this.edit_page(category);
+		button.onclick = () => this.edit_page(type);
 
 		const edit_buttons = document.createElement("div");
 		edit_buttons.className = "editing_scripts";

@@ -1,4 +1,7 @@
 export function export_project() {
+	const url_parameters = new URLSearchParams(window.location.search);
+	const type = url_parameters.get('type');
+
 	const class_name = "editing_scripts";
 	const about_element = document.querySelector(`#about .${class_name}`);
 	const journal_element = document.querySelector(`#project_journal .${class_name}`);
@@ -31,9 +34,11 @@ export function export_project() {
 		editing_scripts[i].remove();
 	}
 
+	const edit_buttons = document.getElementsByTagName("edit-buttons")[0];
+	edit_buttons.setAttribute('type', type);
+
 	const navigation = document.getElementsByTagName("navigation-anchor")[0];
-	const actual_nav = navigation.innerHTML;
-	navigation.innerText = "";
+	navigation.setAttribute('type', type);
 
 	const full_dom = `<!DOCTYPE html>
 ${document.head.outerHTML}
@@ -41,9 +46,9 @@ ${document.body.outerHTML}`;
 	navigator.clipboard.writeText(full_dom);
 	
 	if (window.localStorage.getItem("url_path") !== null) {
-		redirect_edit_page('bekreth', 'main',);
+		redirect_edit_page('liloly', 'main',);
 	} else {
-		redirect_new_page('bekreth', 'main', 'baby');
+		redirect_new_page('liloly', 'main', type);
 	}
 }
 

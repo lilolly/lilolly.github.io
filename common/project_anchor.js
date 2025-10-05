@@ -11,7 +11,7 @@ class ProjectAnchor extends HTMLElement {
 
 		this.outerHTML = `
 		<li>
-			<a href="/project/baby/${work_status}_projects/${link}.html">
+			<a href="/project/${type}/${work_status}_projects/${link}.html">
 				<img src="/icons/${type}.png"/>
 			</a>
 			<span>${title}</span>
