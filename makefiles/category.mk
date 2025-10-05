@@ -1,7 +1,7 @@
 project/%/:
 	mkdir -p $@
 
-project/%/index.html: common/category.html
+project/%/index.html: common/category.html | project/%/
 	cat $< | sed 's|{category}|$*|g' | sed 's|{CATEGORY}|$(shell echo $* | sed "s/\b\(.\)/\u\1/")|g' > $@
 
 build/categories: build/ \
