@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<link rel="stylesheet" href="/common/core.css"/>
+	<link rel="stylesheet" href="/common/navigation.css"/>
+
+	<link rel="stylesheet" href="/project/category.css"/>
+
+	<script src="/common/project_anchor.js" type="module"></script>
+	<script src="/project/navigation_anchor.js" type="module"></script>
+	<script src="/project/new_project_button.js" type="module"></script>
+
+	<script src="/import/htmx.min.js"></script>
+	<script src="/import/js.cookie.min.js"></script>
+	<title>Ly's Life</title>
+</head>
+<body id="custom-pattern">
+	<div id="core">
+		<h1>Social</h1>
+
+		<div id="ongoing">
+			<h2>Ongoing</h2>
+			<ul 
+				 hx-get="/project/social/ongoing_projects"
+				 hx-swap="afterbegin"
+				 hx-trigger="load"
+			>
+				<new-project-button 
+					src="/icons/plus.png" 
+					href="/project/new_project?type=social">
+				</new-project-button>
+			</ul>
+		</div>
+
+		<div id="archive">
+			<h2>Archived</h2>
+			<ul 
+				 hx-get="/project/social/archived_projects"
+				 hx-swap="afterbegin"
+				 hx-trigger="load"
+			>
+			</ul>
+		</div>
+
+	</div>
+	<navigation-anchor type="category"></navigation-anchor>
+</body>
+</html>
