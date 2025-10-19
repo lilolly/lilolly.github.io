@@ -31,3 +31,17 @@
 	font-weight: bold;
 }
 
+@font-face {
+	font-family: "DarlingCoffee";
+	src: url("/common/fonts/DarlingCoffee.otf");
+}
+
+@font-face {
+	font-family: "Handwriting";
+	src: url("/common/fonts/Handwriting-Regular.otf");
+}
+
+@font-face {
+	font-family: "Mabook";
+	src: url("/common/fonts/Mabook.otf");
+}
