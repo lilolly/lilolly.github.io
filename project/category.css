@@ -16,6 +16,15 @@ h2 {
 	background-color: #CFAF91;
 }
 
+h3 {
+	font-family: "Handwriting";
+	font-size: 32pt;
+	text-align: center;
+	margin-top: .5em;
+	padding-top: 0;
+	
+}
+
 ul {
 	padding-left: 0;
 	list-style: none;
