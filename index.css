@@ -3,6 +3,11 @@
 	src: url("/common/fonts/DarlingCoffee.otf");
 }
 
+@font-face {
+	font-family: "Mabook";
+	src: url("/common/fonts/Mabook.otf");
+}
+
 h1 {
 	font-family: "DarlingCoffee";
 	font-size: 32pt;
