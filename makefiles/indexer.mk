@@ -8,6 +8,13 @@ project/art/ongoing_projects/index.html: ${art_ongoing}
 project/art/archived_projects/index.html: ${art_archived}
 	${INDEXER_SCRIPT} $@ archived art $^
 
+aljo_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} aljo ongoing)
+aljo_archived:=$(shell ${INDEX_FINDER_SCRIPT} aljo archived)
+project/aljo/ongoing_projects/index.html: ${aljo_ongoing}
+	${INDEXER_SCRIPT} $@ ongoing aljo $^
+project/aljo/archived_projects/index.html: ${aljo_archived}
+	${INDEXER_SCRIPT} $@ archived aljo $^
+
 baby_ongoing:=$(shell ${INDEX_FINDER_SCRIPT} baby ongoing)
 baby_archived:=$(shell ${INDEX_FINDER_SCRIPT} baby archived)
 project/baby/ongoing_projects/index.html: ${baby_ongoing}
@@ -82,6 +89,7 @@ build/:
 	mkdir $@
 
 build/indexed: build/ \
+	project/aljo/ongoing_projects/index.html project/aljo/archived_projects/index.html \
 	project/art/ongoing_projects/index.html project/art/archived_projects/index.html \
 	project/baby/ongoing_projects/index.html project/baby/archived_projects/index.html \
 	project/blog/ongoing_projects/index.html project/blog/archived_projects/index.html \

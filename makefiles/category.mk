@@ -5,6 +5,7 @@ project/%/index.html: common/category.html | project/%/
 	cat $< | sed 's|{category}|$*|g' | sed 's|{CATEGORY}|$(shell echo $* | sed "s/\b\(.\)/\u\1/")|g' > $@
 
 build/categories: build/ \
+	project/aljo/index.html \
 	project/art/index.html \
 	project/baby/index.html \
 	project/blog/index.html \
