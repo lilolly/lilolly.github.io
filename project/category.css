@@ -9,10 +9,10 @@ h1 {
 h2 {
 	font-family: "Mabook";
 	font-size: 32pt;
-	font-color: white;
+	color: white;
 	text-align: center;
-	margin-top: 5px
-	padding-top: 5px
+	margin-top: 5px;
+	padding-top: 0;
 	background-color: #CFAF91;
 }
 
