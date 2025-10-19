@@ -1,4 +1,5 @@
 h1 {
+ font-family: "DarlingCoffee";
 	font-size: 32pt;
 	text-align: center;
 	margin-bottom: 0;
@@ -6,6 +7,7 @@ h1 {
 }
 
 h2 {
+ font-family: "Mabook"
 	font-size: 28pt;
 	text-align: center;
 	margin-top: 0;
