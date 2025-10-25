@@ -13,8 +13,8 @@ class ProjectAnchor extends HTMLElement {
 		<li>
 			<a href="/project/${type}/${work_status}_projects/${link}.html">
 				<img src="/icons/${type}.png"/>
+				<span>${title}</span>
 			</a>
-			<span>${title}</span>
 		</li>
 		`;
 	}
