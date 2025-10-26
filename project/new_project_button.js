@@ -16,20 +16,16 @@ class NewProjectButton extends HTMLElement {
 			this.outerHTML = "";
 		}
 
-		const image = document.createElement("img");
-		image.src = this.getAttribute("src");
+		const span = document.createElement("span");
+		span.innerText = "New Project";
 
 		const anchor = document.createElement("a");
 		anchor.href = this.getAttribute("href");
 		anchor.onclick = this.clear_session;
-		anchor.appendChild(image);
-
-		const span = document.createElement("span");
-		span.innerText = "New Project";
+		anchor.appendChild(span);
 
 		const list_item = document.createElement("li");
 		list_item.appendChild(anchor);
-		list_item.appendChild(span);
 
 		this.replaceWith(list_item);
 	}
