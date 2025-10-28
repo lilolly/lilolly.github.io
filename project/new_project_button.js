@@ -17,7 +17,7 @@ class NewProjectButton extends HTMLElement {
 		}
 
 		const span = document.createElement("span");
-		span.innerText = "New Project";
+		span.innerText = "+";
 
 		const anchor = document.createElement("a");
 		anchor.href = this.getAttribute("href");
