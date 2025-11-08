@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
 	<link rel="stylesheet" href="/common/core.css">
 	<link rel="stylesheet" href="/common/navigation.css">
@@ -17,12 +16,10 @@
 	
 	
 </head>
-<body id="custom-pattern" onload="attempt_prepopulate()">
+<body id="custom-pattern" onload="attempt_prepopulate()" cz-shortcut-listen="true">
 	<div id="project_page">
 		<div id="title">
-			<div class="title_bumpers">
-				<img src="/icons/crafting.png">
-			</div>
+			<img class="title_bumpers" src="/icons/crafting.png">
 			<h1>
 				Belt bag
 			</h1>
@@ -31,19 +28,17 @@
 			<div id="side_bar">
 				<div id="about">
 					<h2>About</h2>
-					<p>
-						I want to make my ideal smartphone bag that can hang from my belt loops.
-					</p>
-				</div>
-				<hr></hr>
+					
+				<p>I want to make my ideal smartphone bag that can hang from my belt loops.</p></div>
+				<hr>
 				<div id="project_steps">
 					<h2>Steps</h2>
 					<ul id="steps">
-						<li>draw a design</li>
-					</ul>
+					<li class="selectable_li"><input type="checkbox"><span>draw a design</span></li></ul>
+					
 				</div>
-				<hr></hr>
-				<div id="support" >
+				<hr>
+				<div id="support">
 					<h2>Support</h2>
 					<p>
 						If you have any ideas, fill out the survey! Or if you'd like to donate, visit the Kofi below!
@@ -55,10 +50,8 @@
 			</div>
 			<div id="project_journal">
 				<h2>Project Journal</h2>
-				<p>
-
-				</p>
-			</div>
+				
+			<p></p></div>
 		</div>
 	</div>
 	
@@ -67,4 +60,3 @@
 
 
 </body>
-</html>
