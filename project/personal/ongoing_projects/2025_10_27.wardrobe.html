@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<link rel="stylesheet" href="/common/core.css">
 	<link rel="stylesheet" href="/common/navigation.css">
@@ -17,36 +18,51 @@
 	
 </head>
 <body id="custom-pattern" onload="attempt_prepopulate()">
-	<div id="core">
+	<div id="project_page">
 		<div id="title">
-			<img class="title_bumpers" src="/icons/personal.png">
+			<div class="title_bumpers">
+				<img src="/icons/personal.png">
+			</div>
 			<h1>
 				Wardrobe
 			</h1>
-			<a class="title_bumpers" href="https://Ko-fi.com/lilolly">
-				<img src="/icons/kofi.png">
-			</a>
 		</div>
 		<div id="project">
-			<div id="about">
-				<h2>About</h2>
-				
-			<p>I think I've gotten a pretty good sense of what clothes I truly feel comfortable in. It's a good time to go through my wardrobe and narrow it down to what suits me best.</p></div>
+			<div id="side_bar">
+				<div id="about">
+					<h2>About</h2>
+					<p>
+						I think I've gotten a pretty good sense of what clothes I truly feel comfortable in. It's a good time to go through my wardrobe and narrow it down to what suits me best.
+					</p>
+				</div>
+				<hr></hr>
+				<div id="project_steps">
+					<h2>Steps</h2>
+					<ul id="steps">
+					</ul>
+				</div>
+				<hr></hr>
+				<div id="support" >
+					<h2>Support</h2>
+					<p>
+						If you have any ideas, fill out the survey! Or if you'd like to donate, visit the Kofi below!
+					</p>
+					<a href="https://Ko-fi.com/lilolly">
+						<img src="/icons/kofi.png">
+					</a>
+				</div>
+			</div>
 			<div id="project_journal">
 				<h2>Project Journal</h2>
-				
-			<p></p></div>
-			<div id="project_steps">
-				<h2>Steps</h2>
-				<ul id="steps">
-				</ul>
-				
+				<p>
+				</p>
 			</div>
 		</div>
 	</div>
-	
+
 	<edit-buttons type="personal"></edit-buttons>
 	<navigation-anchor type="personal"></navigation-anchor>
 
 
 </body>
+</html>

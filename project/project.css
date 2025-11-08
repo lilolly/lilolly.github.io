@@ -1,3 +1,8 @@
+body {
+	margin: 0;
+	margin-top:3em;
+}
+
 h1 {
  font-family: "Handwriting";
 	font-size: 60pt;
@@ -7,7 +12,8 @@ h1 {
 }
 
 h2 {
- font-family: "Mabook";
+	text-align: center;
+	font-family: "Mabook";
 	font-size: 28pt;
 	margin-bottom: 2%;
 }
@@ -15,6 +21,10 @@ h2 {
 p {
 	text-indent: 2em;
 	font-size: 14pt;
+}
+
+hr {
+	border: 1px solid black;
 }
 
 #title {
@@ -27,50 +37,72 @@ p {
 	border-style: none none solid none;
 	border-width: 2px;
 	.title_bumpers {
-		width: 20%;
-	}
-	img {
-		width: 100%;
+		width: 25%;
+		img {
+			display: block;
+			height: 100%;
+			aspect-ratio: 1 / 1;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	h1 {
-		width: 55%;
+		width: 75%;
 	}
 }
 
 #project {
 	display: flex;
 	padding-bottom: 6em;
-}
 
-#about {
-	width: 30%;
-	padding-right: 1em;
-}
+	#side_bar {
+		width: 25%;
+		border-style: none solid none none;
 
-#project_journal {
-	width: 50%;
-	border-style: none solid none solid;
-	border-width: 2px;
-	padding-right: 1em;
-	padding-left: 1em;
+		#about {
+			width: 75%%;
+			padding-bottom: 1em;
+			padding-left:10%;
+			padding-right:10%;
+		}
 
-	p {
-	}
-	h2 {
-		text-align: center;
-	}
-	img {
-		width: 100%;
-	}
-}
+		#project_steps {
+			width: 75%%;
+			padding-bottom: 1em;
+			padding-left:10%;
+			padding-right:10%;
+			ul {
+				padding: 0;
+				margin-left: 2em;
+			}
+		}
 
-#project_steps {
-	width: 20%;
-	h2 {
-		text-align: right;
+		#support {
+			width: 75%%;
+			p {
+				margin-bottom: 0em;
+				padding-left:10%;
+				padding-right:10%;
+			}
+			img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 80%;
+			}
+		}
 	}
-	ul {
-		padding: 0;
-		margin-left: 2em;
+
+	#project_journal {
+		width: 75%;
+		border-width: 2px;
+		padding-left: 1em;
+
+		p {
+		}
+		img {
+			width: 100%;
+		}
 	}
+
 }
