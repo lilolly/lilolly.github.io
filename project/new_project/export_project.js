@@ -48,7 +48,16 @@ ${document.body.outerHTML}`;
 	if (window.localStorage.getItem("url_path") !== null) {
 		redirect_edit_page('lilolly', 'main',);
 	} else {
-		redirect_new_page('lilolly', 'main', type);
+		const url_title = title_element.value.replaceAll(" ", "_").replaceAll("'", "");
+		const date = new Date();
+		const date_format = {
+			year: 'numeric',
+			month: 'numeric',
+			day: 'numeric'
+		};
+		const date_string = date.toLocaleDateString(date_format).replaceAll("-", "_");
+		const filename = `${date_string}.${url_title}.html`;
+		redirect_new_page('lilolly', 'main', type, filename);
 	}
 }
 
@@ -71,7 +80,7 @@ function redirect_edit_page(username, branch) {
 	window.location.replace(`${home}/${path}`);
 }
 
-function redirect_new_page(username, branch, category) {
+function redirect_new_page(username, branch, category, filename) {
 	const home = `https://github.com/${username}/${username}.github.io/new/${branch}`
-	window.location.replace(`${home}/project/${category}/ongoing_projects`);
+	window.location.replace(`${home}/project/${category}/ongoing_projects?filename=${filename}`);
 }
