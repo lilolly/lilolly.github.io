@@ -1,11 +1,28 @@
 function add_element() {
+	console.log("making");
 	const step_input = document.getElementById("step_input");
 
 	const steps = document.getElementById("steps");
 	const node = document.createElement("li");
-	const text = document.createTextNode(step_input.value);
 
+	node.className = "selectable_li";
+
+	const checkbox = document.createElement("input");
+	checkbox.type = "checkbox";
+	checkbox.onclick = () => {
+		if (checkbox.checked) {
+			checkbox.setAttribute("checked", "true");
+		} else {
+			checkbox.setAttribute("checked", "false");
+		}
+	};
+
+	const text = document.createElement("span");
+	text.innerText = step_input.value;
+
+	node.appendChild(checkbox);
 	node.appendChild(text);
+
 	steps.appendChild(node);
 	step_input.value = "";
 }

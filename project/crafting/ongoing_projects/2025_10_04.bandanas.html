@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
 	<link rel="stylesheet" href="/common/core.css">
 	<link rel="stylesheet" href="/common/navigation.css">
@@ -17,12 +16,10 @@
 	
 	
 </head>
-<body id="custom-pattern" onload="attempt_prepopulate()">
+<body id="custom-pattern" onload="attempt_prepopulate()" cz-shortcut-listen="true">
 	<div id="project_page">
 		<div id="title">
-			<div class="title_bumpers">
-				<img src="/icons/crafting.png">
-			</div>
+			<img class="title_bumpers" src="/icons/crafting.png">
 			<h1>
 				Bandanas
 			</h1>
@@ -31,20 +28,17 @@
 			<div id="side_bar">
 				<div id="about">
 					<h2>About</h2>
-					<p>
-					My bangs are growing out, and the internet said to use hair bandanas to keep them out of the way. So I’m going to make a million bandanas. Maybe I’ll sell some in the future.
-					</p>
-				</div>
-				<hr></hr>
+					
+				<p>My bangs are growing out, and the internet said to use hair bandanas to keep them out of the way. So I’m going to make a million bandanas. Maybe I’ll sell some in the future.</p></div>
+				<hr>
 				<div id="project_steps">
 					<h2>Steps</h2>
 					<ul id="steps">
-						<li>Buy yarn</li>
-						<li>Make bandana</li>
-					</ul>
+					<li class="selectable_li"><input type="checkbox"><span>Buy yarn</span></li><li class="selectable_li"><input type="checkbox"><span>Make bandana</span></li></ul>
+					
 				</div>
-				<hr></hr>
-				<div id="support" >
+				<hr>
+				<div id="support">
 					<h2>Support</h2>
 					<p>
 						If you have any ideas, fill out the survey! Or if you'd like to donate, visit the Kofi below!
@@ -56,10 +50,8 @@
 			</div>
 			<div id="project_journal">
 				<h2>Project Journal</h2>
-				<p>
-				I’ve made 5 bandanas so far.
-				</p>
-			</div>
+				
+			<p>I’ve made 5 bandanas so far.</p></div>
 		</div>
 	</div>
 	
@@ -68,4 +60,3 @@
 
 
 </body>
-</html>
