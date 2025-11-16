@@ -18,7 +18,7 @@
 	<script class="editing_scripts" src="/project/new_project/index.js" type="text/javascript"></script>
 </head>
 <body id="custom-pattern" onload='attempt_prepopulate()'>
-	<div id="core">
+	<div id="project_page">
 		<div id="title">
 			<type-icon></type-icon>
 			<h1>
@@ -29,27 +29,37 @@
 					autocomplete="off"
 				></input>
 			</h1>
-			<a class="title_bumpers" href="https://Ko-fi.com/lilolly">
-				<img src="/icons/kofi.png"></img>
-			</a>
 		</div>
 		<div id="project">
-			<div id="about">
-				<h2>About</h2>
-				<textarea class="editing_scripts" rows="100"></textarea>
+			<div id="side_bar">
+				<div id="about">
+					<h2>About</h2>
+					<textarea class="editing_scripts" rows="60"></textarea>
+				</div>
+				<hr></hr>
+				<div id="project_steps">
+					<h2>Steps</h2>
+					<ul id="steps">
+					</ul>
+					<div class="editing_scripts" >
+						<input id="step_input" type="text" autocomplete="off"></input>
+						<button onClick="add_element();">Add</button>
+					</div>
+				</div>
+				<hr></hr>
+				<div id="support" >
+					<h2>Support</h2>
+					<p>
+						If you have any ideas, fill out the survey! Or if you'd like to donate, visit the Kofi below!
+					</p>
+					<a href="https://Ko-fi.com/lilolly">
+						<img src="/icons/kofi.png">
+					</a>
+				</div>
 			</div>
 			<div id="project_journal">
 				<h2>Project Journal</h2>
-				<textarea class="editing_scripts" rows="100"></textarea>
-			</div>
-			<div id="project_steps">
-				<h2>Steps</h2>
-				<ul id="steps">
-				</ul>
-				<div class="editing_scripts" >
-					<input id="step_input" type="text" autocomplete="off"></input>
-					<button onClick="add_element();">Add</button>
-				</div>
+				<textarea class="editing_scripts" rows="60"></textarea>
 			</div>
 		</div>
 	</div>
